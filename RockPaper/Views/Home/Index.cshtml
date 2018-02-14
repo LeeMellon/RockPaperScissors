@@ -5,13 +5,14 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <link rel="stylesheet" type="text/css" href="~/css/styles.css" />
+    <link href="https://fonts.googleapis.com/css?family=Orbitron" rel="stylesheet">
     <script src="~/js/scripts.js"></script>
     <title></title>
   </head>
   <body>
     <div class="container">
-      <form action="/gameResult" method="post">
-
+      <form action="/gameResult" method="post" class="forms">
+        <h1>Rock Paper Scissors</h1>
         <div>
           <label>Player One:</label><br>
           <input type="radio" name="PlayerOne" value="Rock">Rock
@@ -28,9 +29,31 @@
 
         <button type="submit" name="button">Submit</button>
       </form>
+      <br>
+      <br>
+      <br>
+      <br>
+      <form action="/compResult" method="post" class="forms">
+        <h1>Rock Paper DEEP BLUE!!</h1>
+        <div>
+
+          <label>Computer:</label><br>
+          <label>Player Two:</label><br>
+          <input type="radio" name="PlayerSolo" value="Rock">Rock
+          <input type="radio" name="PlayerSolo" value="Paper">Paper
+          <input type="radio" name="PlayerSolo" value="Scissors">Scissors
+        </div><br>
+
+        <button type="submit" name="compButton">Submit</button>
+      </form>
     </div>
     <div class="GameResult">
-      @Model.GetResult()
+        @Model.GetResult()
+        <br>
+        <!-- @Model.GetPlayerOneScore()
+        <br>
+        @Model.GetPlayerTwoScore() -->
+
     </div>
   </body>
 </html>

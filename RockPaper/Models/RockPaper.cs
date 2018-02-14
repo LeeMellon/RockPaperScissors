@@ -11,14 +11,16 @@ namespace RockPaper.Models
       private string _result;
 
 
-      public void SetPlayerOneScore(int newScore)
+      public int SetPlayerOneScore(int newScore)
       {
         _playerOneScore += newScore;
+        return _playerOneScore;
       }
 
-      public void SetPlayerTwoScore(int newScore)
+      public int SetPlayerTwoScore(int newScore)
       {
         _playerTwoScore += newScore;
+        return _playerTwoScore;
       }
 
       public int GetPlayerOneScore()
@@ -37,7 +39,6 @@ namespace RockPaper.Models
 
       public string PlayerOneRock(string PlayerTwoChoice)
       {
-        // string Result = "";
         if (PlayerTwoChoice == "Rock")
         {
           _result = "Tie";
@@ -54,7 +55,6 @@ namespace RockPaper.Models
 
       public string PlayerOnePaper(string PlayerTwoChoice)
       {
-        // string Result = "";
         if(PlayerTwoChoice == "Paper")
         {
           _result = "Tie";
@@ -71,7 +71,6 @@ namespace RockPaper.Models
 
       public string PlayerOneScissors(string PlayerTwoChoice)
       {
-        // string Result = "";
         if (PlayerTwoChoice == "Scissors")
         {
           _result = "Tie";

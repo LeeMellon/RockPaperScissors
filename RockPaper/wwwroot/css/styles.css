@@ -1,0 +1,16 @@
+h1{
+  font-family: 'Orbitron', sans-serif;
+}
+body {
+  background-image: url('../img/Rock.jpg');
+}
+
+.GameResult{
+  font-size: 23pt;
+  margin-left: 30px;
+  margin-top: 40px;
+}
+
+.forms{
+  font-size: 20pt;
+}

@@ -31,5 +31,22 @@ namespace RockPaper.Controllers
         return View("Index", newGame);
       }
 
+      [HttpPost("/compResult")]
+      public ActionResult ComputerGameResult()
+      {
+        Random r = new Random();
+        int ComputerChoice = (r.Next(1, 3));
+        string PTChoice = Request.Form["PlayerSolo"];
+        RPS newGame = new RPS();
+        if (ComputerChoice == 1){
+          newGame.PlayerOneRock(PTChoice);
+        } else if (ComputerChoice == 2){
+          newGame.PlayerOnePaper(PTChoice);
+        } else if (ComputerChoice == 3){
+          newGame.PlayerOneScissors(PTChoice);
+        }
+
+        return View("Index", newGame);
+      }
     }
 }
